@@ -1,9 +1,9 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #e8f5e9; /* Light greenish background */
     color: #333;
 }
 
@@ -12,23 +12,24 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: #35424a; /* Dark background for header */
+    background: #388e3c; /* Darker green for header */
     color: #ffffff; /* White text color */
-    padding: 15px 0; /* Padding for header */
+    padding: 20px 0; /* Padding for header */
     z-index: 1000; /* Ensure header is on top */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
     text-align: center; /* Center align text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
 }
 
 header h1 {
     margin: 0;
-    font-size: 24px; /* Header font size */
-}
-header p {
-    margin: 5px 0; /* Spacing between header elements */
-    font-size: 16px; /* Subheader font size */
+    font-size: 28px; /* Larger header font size */
+    letter-spacing: 1px; /* Spacing between letters */
 }
 
+header p {
+    margin: 5px 0; /* Spacing between header elements */
+    font-size: 18px; /* Larger subheader font size */
+}
 
 nav {
     margin-top: 10px; /* Spacing above navigation */
@@ -41,19 +42,19 @@ nav ul {
 
 nav ul li {
     display: inline; /* Horizontal list items */
-    margin-right: 15px; /* Spacing between links */
+    margin-right: 25px; /* Spacing between links */
 }
 
 nav ul li a {
     color: #ffffff; /* Link color */
     text-decoration: none; /* Remove underline */
-    padding: 5px 10px; /* Padding for links */
+    padding: 8px 15px; /* Padding for links */
     transition: background-color 0.3s ease; /* Transition for hover effect */
+    border-radius: 5px; /* Rounded corners for links */
 }
 
 nav ul li a:hover {
-    background-color: #007bff; /* Change background on hover */
-    border-radius: 5px; /* Rounded corners */
+    background-color: #66bb6a; /* Lighter green on hover */
 }
 
 main {
@@ -63,28 +64,30 @@ main {
 section {
     margin: 40px 0; /* Space between sections */
     background: #ffffff; /* White background for sections */
-    padding: 20px; /* Padding for sections */
-    border-radius: 8px; /* Rounded corners for sections */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 25px; /* Padding for sections */
+    border-radius: 12px; /* More rounded corners for sections */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
     transition: transform 0.3s ease; /* Transition for hover effect */
+    animation: fadeIn 1s ease-in; /* Apply fade-in animation */
 }
 
 section:hover {
-    transform: scale(1.01); /* Scale effect on hover */
+    transform: scale(1.02); /* Scale effect on hover */
 }
 
 h2 {
-    border-bottom: 2px solid #007bff; /* Blue line below headings */
+    border-bottom: 3px solid #388e3c; /* Dark green line below headings */
     padding-bottom: 5px; /* Padding for spacing */
+    font-size: 22px; /* Heading font size */
 }
 
 .project-card {
     display: inline-block; /* Align project cards side by side */
     width: calc(33.333% - 20px); /* Three cards in a row */
     margin: 10px; /* Margin around cards */
-    background: #f9f9f9; /* Light background for project cards */
+    background: #f1f8e9; /* Light greenish background for project cards */
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
     overflow: hidden; /* Clip the image */
     transition: transform 0.3s ease; /* Transition for hover effect */
 }
@@ -100,13 +103,29 @@ h2 {
 
 footer {
     text-align: center; /* Centered text */
-    padding: 10px 0; /* Padding for footer */
-    background: #35424a; /* Dark background for footer */
+    padding: 15px 0; /* Padding for footer */
+    background: #388e3c; /* Dark green background for footer */
     color: #ffffff; /* White text color */
     position: relative; /* Positioning for footer */
     bottom: 0; /* Align at bottom */
     width: 100%; /* Full width footer */
 }
+
+footer a {
+    color: white; /* Icon color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Spacing between links */
+    font-size: 16px; /* Icon and text size */
+}
+
+footer a:hover {
+    color: #66bb6a; /* Change color on hover */
+}
+
+footer i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
 
 ul {
     padding-left: 20px; /* Indent list items */
@@ -124,3 +143,38 @@ ul {
         width: 100%; /* One card per row on very small screens */
     }
 }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+#hero {
+    position: relative;
+    height: 400px; /* Adjust as needed */
+    background-size: cover; /* Cover the entire section */
+    color: white; /* Text color */
+    display: flex; /* Center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 20px; /* Padding for content */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.btn {
+    background-color: #66bb6a; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.btn:hover {
+    background-color: #388e3c; /* Darker button on hover */
+}
+
