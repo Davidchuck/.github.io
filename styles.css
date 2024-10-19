@@ -1,29 +1,127 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    position: fixed; /* Fixed header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #35424a; /* Dark background for header */
+    color: #ffffff; /* White text color */
+    padding: 15px 0; /* Padding for header */
+    z-index: 1000; /* Ensure header is on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    text-align: center; /* Center align text */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px; /* Header font size */
+}
+
+header p {
+    margin: 5px 0; /* Spacing between header elements */
+    font-size: 16px; /* Subheader font size */
+}
+
+
+nav {
+    margin-top: 10px; /* Spacing above navigation */
 }
 
 nav ul {
-    list-style: none;
+    list-style: none; /* Remove default list styles */
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
-    
+    display: inline; /* Horizontal list items */
+    margin-right: 15px; /* Spacing between links */
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
+nav ul li a {
+    color: #ffffff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px; /* Padding for links */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+nav ul li a:hover {
+    background-color: #007bff; /* Change background on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+main {
+    padding: 80px 20px; /* Space for fixed header */
+}
+
+section {
+    margin: 40px 0; /* Space between sections */
+    background: #ffffff; /* White background for sections */
+    padding: 20px; /* Padding for sections */
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+section:hover {
+    transform: scale(1.01); /* Scale effect on hover */
+}
+
+h2 {
+    border-bottom: 2px solid #007bff; /* Blue line below headings */
+    padding-bottom: 5px; /* Padding for spacing */
+}
+
+.project-card {
+    display: inline-block; /* Align project cards side by side */
+    width: calc(33.333% - 20px); /* Three cards in a row */
+    margin: 10px; /* Margin around cards */
+    background: #f9f9f9; /* Light background for project cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Clip the image */
+    transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+.project-card img {
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+footer {
+    text-align: center; /* Centered text */
+    padding: 10px 0; /* Padding for footer */
+    background: #35424a; /* Dark background for footer */
+    color: #ffffff; /* White text color */
+    position: relative; /* Positioning for footer */
+    bottom: 0; /* Align at bottom */
+    width: 100%; /* Full width footer */
+}
+
+ul {
+    padding-left: 20px; /* Indent list items */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(50% - 20px); /* Two cards in a row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        width: 100%; /* One card per row on very small screens */
+    }
 }
